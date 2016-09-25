@@ -10,3 +10,9 @@ In Arduino, download the zip of this repository: https://github.com/erniejunior/
 ### Wekinator
 This repo only contains code to manage Wekinator output: you will still need to hook up inputs to a Wekinator project.
 
+## Running It
+In order to run this, you need to first compile and upload your code to the Arduino board, and then run the Processing sketch, in that order.
+
+
+## How It Works
+Since Arduino can't directly recieve wireless information without a Wifi module, we instead have a Processing sketch recieving information directly from Wekinator via OSC. Meanwhile, the VSync library allows Processing and Arduino to talk to each other easily via the Serial USB port. The Processing sketch interprets the OSC Message and sync it with Arduino via VSync.
